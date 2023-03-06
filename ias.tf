@@ -1,18 +1,16 @@
- Create a single Compute Engine instance
+#Create a single Compute Engine instance
 resource "google_compute_instance" "default" {
   name         = "flask-vm"
-  machine_type = "f1-micro"
+  machine_type = "e2-highmem-8"
   zone         = "eu-west3-a"
-  tags         = ["app=flight"," ]
+  tags         = ["un=air"]
 
   boot_disk {
     initialize_params {
       image = "windows-cloud/windows-2022"
+      size = 80  
     }
   }
-
-  # Install Flask
-  metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential python3-pip rsync; pip install flask"
 
   network_interface {
     subnetwork = google_compute_subnetwork.default.id
@@ -22,4 +20,4 @@ resource "google_compute_instance" "default" {
     }
   }
 }
-# [END compute_flask_quickstart_vm]
+# [END compute_ias_vm]
