@@ -1,4 +1,4 @@
-#Create a single Compute Engine instance
+#Create a single Compute Engine instance default
 resource "google_compute_instance" "default" {
   name         = "duaassvgsrpro01"
   machine_type = "e2-highmem-8"
@@ -20,4 +20,5 @@ resource "google_compute_instance" "default" {
     }
   }
 }
+####
 # [END compute_ias_vm]
