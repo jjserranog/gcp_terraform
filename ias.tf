@@ -17,7 +17,10 @@ resource "google_compute_instance" "default" {
 
   network_interface {
     subnetwork = google_compute_subnetwork.default.id
-
+    name = "ip-duaassvgsrpro01"
+    address_type = "INTERNAL"
+    address      = "10.109.162.10"
+    region       = "eu-west1"
     access_config {
       # Include this section to give the VM an external IP address
     }
