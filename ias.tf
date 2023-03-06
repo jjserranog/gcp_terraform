@@ -1,8 +1,8 @@
 #Create a single Compute Engine instance
 resource "google_compute_instance" "default" {
-  name         = "flask-vm"
+  name         = "duaassvgsrpro01"
   machine_type = "e2-highmem-8"
-  zone         = "eu-west3-a"
+  zone         = "eu-west1-a"
   tags         = ["un=air"]
 
   boot_disk {
