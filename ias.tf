@@ -7,8 +7,10 @@ resource "google_compute_instance" "default" {
   tags         = ["un=air"]
   
   boot_disk {
+    auto_delete = "false"
+    device_name = "duaassvgsrpro01-so"
     initialize_params {
-      image = "windows-cloud/windows-2022"
+    image = "windows-cloud/windows-2022"
       size = 80  
     }
   }
