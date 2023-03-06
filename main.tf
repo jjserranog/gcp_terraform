@@ -9,3 +9,5 @@
 
 
 
+
+ terraform import google_project.air-cpd-dus-pro air-cpd-dus-pro
